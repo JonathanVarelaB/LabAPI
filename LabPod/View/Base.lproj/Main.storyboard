@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cQE-J1-SIg">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Users-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Users" id="BYZ-38-t0r" customClass="UsersController" customModule="LabPod" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Axv-VM-H4p">
+                                <rect key="frame" x="16" y="154" width="288" height="257"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PFo-ea-1ES">
+                                <rect key="frame" x="234" y="124" width="70" height="30"/>
+                                <color key="backgroundColor" red="0.84607666729999997" green="0.27463918609999999" blue="0.18181226319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="XLh-aL-dx9"/>
+                                    <constraint firstAttribute="height" constant="30" id="xBT-Zy-DVk"/>
+                                </constraints>
+                                <state key="normal" title="Limpiar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="limpiar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ATt-bt-Uc8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxw-3Q-bbF">
+                                <rect key="frame" x="110" y="73" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="VPJ-Uj-DG2"/>
+                                    <constraint firstAttribute="height" constant="30" id="dg8-I4-CnM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <state key="normal" title="Consultar">
+                                    <color key="titleColor" red="0.84607666729999997" green="0.27463918609999999" blue="0.18181226319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="consultarUsers:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lws-5I-ehQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PFo-ea-1ES" secondAttribute="trailing" constant="16" id="AP6-cC-ZbG"/>
+                            <constraint firstItem="Axv-VM-H4p" firstAttribute="top" secondItem="Dxw-3Q-bbF" secondAttribute="bottom" constant="51" id="B1j-4V-eK7"/>
+                            <constraint firstItem="Axv-VM-H4p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Dht-Ef-o6W"/>
+                            <constraint firstItem="Dxw-3Q-bbF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="ELE-2p-DV6"/>
+                            <constraint firstItem="Dxw-3Q-bbF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GCQ-ut-bnv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Axv-VM-H4p" secondAttribute="trailing" constant="16" id="Qb0-Qc-6Mb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Axv-VM-H4p" secondAttribute="bottom" constant="20" id="YKe-4v-vEG"/>
+                            <constraint firstItem="Axv-VM-H4p" firstAttribute="top" secondItem="PFo-ea-1ES" secondAttribute="bottom" id="ddv-yg-v4R"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Users" id="t64-Gj-cKq"/>
+                    <connections>
+                        <outlet property="resultadoView" destination="Axv-VM-H4p" id="0Zm-fp-Hcw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="-18"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="B5G-SM-CaO">
+            <objects>
+                <tabBarController id="cQE-J1-SIg" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UiD-dp-zis">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="C5O-ct-XXf"/>
+                        <segue destination="pFJ-EM-5tY" kind="relationship" relationship="viewControllers" id="G2o-Re-bpV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cWC-O1-4w0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42" y="404"/>
+        </scene>
+        <!--Users-->
+        <scene sceneID="SDe-Wg-prZ">
+            <objects>
+                <viewController title="Users" id="pFJ-EM-5tY" customClass="CommentsController" customModule="LabPod" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Ie-XV-AkD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7F-wi-EXM">
+                                <rect key="frame" x="110" y="73" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="MQ2-RE-VhO"/>
+                                    <constraint firstAttribute="height" constant="30" id="wX1-qj-NFo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <state key="normal" title="Consultar">
+                                    <color key="titleColor" red="0.84607666729999997" green="0.27463918609999999" blue="0.18181226319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="consultarAPI:" destination="pFJ-EM-5tY" eventType="touchUpInside" id="XrI-RN-JAg"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="odC-vo-kqX">
+                                <rect key="frame" x="16" y="154" width="288" height="257"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDm-dp-gjP">
+                                <rect key="frame" x="234" y="124" width="70" height="30"/>
+                                <color key="backgroundColor" red="0.84607666729999997" green="0.27463918609999999" blue="0.18181226319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="RgH-h2-RfD"/>
+                                    <constraint firstAttribute="height" constant="30" id="z55-gL-sbg"/>
+                                </constraints>
+                                <state key="normal" title="Limpiar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="limpiar:" destination="pFJ-EM-5tY" eventType="touchUpInside" id="TUb-Lk-4Fi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D7F-wi-EXM" firstAttribute="top" secondItem="r7j-HJ-TDh" secondAttribute="top" constant="53" id="3s2-yZ-eYy"/>
+                            <constraint firstItem="r7j-HJ-TDh" firstAttribute="trailing" secondItem="aDm-dp-gjP" secondAttribute="trailing" constant="16" id="DgN-CW-Rgl"/>
+                            <constraint firstItem="odC-vo-kqX" firstAttribute="top" secondItem="aDm-dp-gjP" secondAttribute="bottom" id="SMa-Um-xUr"/>
+                            <constraint firstItem="odC-vo-kqX" firstAttribute="top" secondItem="D7F-wi-EXM" secondAttribute="bottom" constant="51" id="UdO-5f-DaE"/>
+                            <constraint firstItem="D7F-wi-EXM" firstAttribute="centerX" secondItem="4Ie-XV-AkD" secondAttribute="centerX" id="cub-1P-8N9"/>
+                            <constraint firstItem="odC-vo-kqX" firstAttribute="leading" secondItem="r7j-HJ-TDh" secondAttribute="leading" constant="16" id="cuo-2m-cDZ"/>
+                            <constraint firstItem="r7j-HJ-TDh" firstAttribute="trailing" secondItem="odC-vo-kqX" secondAttribute="trailing" constant="16" id="gUN-St-roC"/>
+                            <constraint firstItem="r7j-HJ-TDh" firstAttribute="bottom" secondItem="odC-vo-kqX" secondAttribute="bottom" constant="20" id="xaC-1e-ptR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r7j-HJ-TDh"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Comments" id="kqk-PA-fZu"/>
+                    <connections>
+                        <outlet property="resultadoView" destination="odC-vo-kqX" id="KUf-UN-EzL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d6V-zo-shO" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="749"/>
+        </scene>
+    </scenes>
+</document>
